@@ -32,7 +32,7 @@ var includes = _.transform(config, function(result, value, key) {
 
   result[key] = 
     files.map(function(value) {
-      var href = path.join(ngDir, value);
+      var href = path.join('..', ngDir, value);
       return `<script href="${href}"></script>`;
     }).join('\n');
 });
