@@ -31,10 +31,13 @@ var includes = _.transform(config, function(result, value, key) {
   });
 
   result[key] = 
-    files.map(function(value) {
-      var href = path.join('..', ngDir, value);
-      return `<script href="${href}"></script>`;
-    }).join('\n');
+    _(files)
+      .uniq()
+      .map(function(value) {
+        var src = path.join('..', ngDir, value);
+        return `<script src="${src}"></script>`;
+      })
+      .join('\n');
 });
 
 _.forIn(includes, function(value, key) {
