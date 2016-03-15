@@ -1,0 +1,4 @@
+[submodule "ng"]
+	path = ng
+	url = https://github.com/angular/angular.js.git
+	branch = master
