@@ -1,16 +1,17 @@
 {
-  "name": "tmp",
+  "name": "ng-browser-tests",
   "version": "1.0.0",
   "description": "",
   "main": "test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node test.js"
   },
-  "author": "",
+  "author": "Zack Hall",
   "license": "ISC",
   "dependencies": {
     "glob": "^7.0.3",
     "lodash": "^4.6.1",
+    "mkdirp": "^0.5.1",
     "nunjucks": "^2.4.0"
   }
 }
